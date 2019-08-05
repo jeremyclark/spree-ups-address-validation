@@ -28,8 +28,10 @@ $(document).ready(function () {
       $("#order_" + value + "_address_attributes_zipcode").val( $(".ups-address-validation-suggestion-zip", $suggestion).text() );
     });
 
-    $('html, body').animate({
-      scrollTop: $("#billing").offset().top - 90
-    }, 1000);
+    if($("#billing").length > 1) {
+      $('html, body').animate({
+        scrollTop: $("#billing").offset().top - 90
+      }, 1000);
+    }
   });
 });
